@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="AISON PROMOTIONZ — event marketing, event management, talent promotion, artist management, graphic design, T-shirt printing, blogs and vlogs.">
+<title>AISON PROMOTIONZ | We Make It Happens</title>
+<style>
+:root{--navy:#081b72;--blue:#102b9b;--red:#e3262e;--gold:#ffb51b;--ink:#111827;--muted:#64748b;--paper:#f5f7fc;--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:var(--paper);line-height:1.55}
+a{color:inherit}.topbar{background:#07134b;color:#fff;padding:8px 5%;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:.9rem}
+.topbar a{text-decoration:none}.nav{position:sticky;top:0;z-index:10;background:#fff;box-shadow:0 3px 18px #0b17451a;padding:12px 5%;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{font-weight:900;letter-spacing:.4px;font-size:1.12rem}.brand span{color:var(--red)}.navlinks{display:flex;gap:20px;align-items:center;flex-wrap:wrap}.navlinks a{text-decoration:none;font-weight:700;font-size:.9rem}.navlinks a:hover{color:var(--red)}
+.btn{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:8px;padding:12px 18px;font-weight:800;text-decoration:none;cursor:pointer;transition:.2s}.btn:hover{transform:translateY(-2px)}.red{background:var(--red);color:#fff}.blue{background:var(--navy);color:#fff}.gold{background:var(--gold);color:#171717}
+.hero{min-height:520px;padding:70px 5%;display:grid;grid-template-columns:1.05fr .95fr;gap:42px;align-items:center;background:radial-gradient(circle at 85% 20%,#334acb 0,transparent 35%),linear-gradient(130deg,#07134b,#102b9b 70%,#07134b);color:#fff;overflow:hidden}
+.eyebrow{color:var(--gold);font-weight:900;letter-spacing:2px;text-transform:uppercase}.hero h1{font-size:clamp(2.5rem,5vw,4.7rem);line-height:1.02;margin:12px 0}.hero h1 span{color:#ff454b}.hero p{font-size:1.1rem;color:#e4e9ff;max-width:580px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}.hero-image{background:#fff;border:7px solid #fff;border-radius:16px;box-shadow:0 22px 55px #0006;transform:rotate(1deg);overflow:hidden}.hero-image img{display:block;width:100%;height:auto}
+section{padding:70px 5%}.section-head{text-align:center;max-width:720px;margin:0 auto 34px}.section-head h2{font-size:clamp(1.8rem,3vw,2.6rem);margin:4px 0 8px;color:#101b45}.section-head p{color:var(--muted);margin:0}
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.service{background:#fff;padding:24px;border-radius:14px;border:1px solid #e8ebf5;box-shadow:0 8px 25px #101b4509}.service .num{width:42px;height:42px;border-radius:12px;background:#fff0f0;color:var(--red);display:grid;place-items:center;font-weight:900}.service h3{margin:14px 0 6px}.service p{margin:0;color:var(--muted);font-size:.95rem}
+.about{background:#fff;display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}.about-panel{background:linear-gradient(140deg,var(--navy),#152eaa);color:#fff;padding:34px;border-radius:18px}.about-panel h2{font-size:2rem;margin-top:0}.checks{padding:0;list-style:none}.checks li{margin:12px 0}.checks li:before{content:"✓";color:var(--gold);font-weight:900;margin-right:10px}
+.contact-wrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:25px;align-items:start}.contact-card,.form-card{background:#fff;border-radius:16px;padding:28px;box-shadow:0 8px 28px #101b450d}.contact-card h3,.form-card h3{margin-top:0}.contact-line{padding:13px 0;border-bottom:1px solid #edf0f7}.contact-line:last-child{border:0}.contact-line small{display:block;color:var(--muted)}.contact-line a{font-weight:800;text-decoration:none;color:var(--navy)}
+form{display:grid;grid-template-columns:1fr 1fr;gap:14px}label{display:block;font-weight:700;font-size:.9rem}input,select,textarea{width:100%;padding:12px;border:1px solid #d8deeb;border-radius:8px;margin-top:6px;font:inherit;background:#fff}textarea{min-height:120px;resize:vertical}.full{grid-column:1/-1}.form-note{color:var(--muted);font-size:.85rem;margin:10px 0 0}
+.admin{background:#eef1fa}.admin-box{max-width:850px;margin:auto;background:#fff;border-radius:16px;padding:26px;box-shadow:0 8px 25px #101b450c}.admin-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.admin-list{margin-top:18px}.entry{border:1px solid #e4e8f2;border-radius:10px;padding:12px;margin:9px 0}.entry small{color:var(--muted)}.hidden{display:none!important}
+footer{background:#07134b;color:#dce3ff;padding:30px 5%;text-align:center}footer strong{color:#fff}footer a{color:#fff}
+.float-wa{position:fixed;right:18px;bottom:18px;background:#16a34a;color:#fff;text-decoration:none;border-radius:50px;padding:13px 17px;font-weight:900;box-shadow:0 8px 22px #0003;z-index:20}
+@media(max-width:850px){.hero,.about,.contact-wrap{grid-template-columns:1fr}.hero{padding-top:48px}.hero-image{max-width:540px;margin:auto}.services{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:580px){.nav{align-items:flex-start;flex-direction:column}.navlinks{gap:12px}.services{grid-template-columns:1fr}section{padding:52px 5%}form,.admin-grid{grid-template-columns:1fr}.full{grid-column:auto}.topbar{font-size:.8rem}}
+
+.poster-card{background:#fff;border:1px solid #e5e9f2;border-radius:14px;overflow:hidden;box-shadow:0 8px 25px #101b4509}
+.poster-card img{display:block;width:100%;height:310px;object-fit:contain;background:#eef1f8}
+.poster-card-body{padding:18px}.poster-card-body h3{margin:0 0 6px}.poster-card-body p{margin:0 0 12px;color:var(--muted);white-space:pre-wrap}.poster-tag{display:inline-block;background:#fff0f0;color:#b91c1c;padding:4px 9px;border-radius:30px;font-size:.75rem;font-weight:800;margin-bottom:8px}
+
+
+.admin-published-row{display:flex;align-items:center;gap:12px;padding:12px;border:1px solid #e5e9f2;border-radius:12px;margin:10px 0;background:#fff}
+.admin-published-row img{width:72px;height:82px;object-fit:cover;border-radius:8px;background:#eef1f8}
+.admin-published-info{flex:1;min-width:0}.admin-published-info strong{display:block}.admin-published-info small{color:#64748b}
+.delete-post-btn{border:0;border-radius:8px;padding:9px 12px;background:#b91c1c;color:#fff;font-weight:700;cursor:pointer}
+
+</style>
+</head>
+<body>
+<div class="topbar"><span>📍 Uganda · Events, talent & creative promotion</span><span>Call/WhatsApp: <a href="tel:+256771271886">+256 771 271886</a></span></div>
+<nav class="nav">
+  <div class="brand">AISON <span>PROMOTIONZ</span></div>
+  <div class="navlinks"><a href="#home">Home</a><a href="#services">Services</a><a href="#updates">Updates</a><a href="#about">About</a><a href="#contact">Contact</a><a href="#admin">Admin</a></div>
+  <a class="btn red" href="#contact">Make an enquiry</a>
+</nav>
+<main>
+<section class="hero" id="home">
+ <div><div class="eyebrow">We make it happens</div><h1>Make your next <span>event</span> unforgettable.</h1>
+ <p>AISON PROMOTIONZ helps bring ideas, people and brands together through event marketing, event management, talent promotion and creative services.</p>
+ <div class="hero-actions"><a class="btn gold" href="#services">Explore our services</a><a class="btn" style="border:1px solid #ffffff88;color:#fff" href="https://wa.me/256771271886?text=Hello%20AISON%20PROMOTIONZ%2C%20I%20would%20like%20to%20make%20an%20enquiry." target="_blank" rel="noopener">Chat on WhatsApp</a></div>
+ </div>
+ <div class="hero-image"><img src="assets/aison-promotionz-poster.jpg" alt="AISON PROMOTIONZ promotional poster"></div>
+</section>
+<section id="services">
+ <div class="section-head"><div class="eyebrow">What we do</div><h2>Our services</h2><p>Choose a service and tell us what you have in mind. We will get back to you.</p></div>
+ <div class="services">
+  <article class="service"><div class="num">01</div><h3>Event Marketing</h3><p>Promote your event, reach your audience and build excitement before the big day.</p></article>
+  <article class="service"><div class="num">02</div><h3>Event Management</h3><p>Planning and coordination support to help your event run smoothly.</p></article>
+  <article class="service"><div class="num">03</div><h3>Talent Promotion</h3><p>Give emerging talent more visibility and connect with new opportunities.</p></article>
+  <article class="service"><div class="num">04</div><h3>Artist Management</h3><p>Promotion and management support for artists and creative professionals.</p></article>
+  <article class="service"><div class="num">05</div><h3>Graphics Designing</h3><p>Creative visual designs for posters, adverts, brands and social media.</p></article>
+  <article class="service"><div class="num">06</div><h3>T-shirt Printing</h3><p>Custom printed T-shirts for teams, events, organisations and brands.</p></article>
+  <article class="service"><div class="num">07</div><h3>Blogs and Vlogs</h3><p>Content creation and storytelling to share ideas, people and events.</p></article>
+ </div>
+</section>
+
+<section id="updates">
+ <div class="section-head"><div class="eyebrow">Latest updates</div><h2>Services &amp; Updates</h2><p>Explore our services and the latest posters published by AISON PROMOTIONZ.</p></div>
+ <div id="publicPosters" class="services" aria-live="polite"><div class="service"><div class="num">★</div><h3>Coming soon</h3><p>New posters will appear here when the administrator publishes them.</p></div></div>
+</section>
+
+<section class="about" id="about">
+ <div><div class="eyebrow">About AISON</div><h2>Creative ideas. Professional delivery.</h2><p>AISON PROMOTIONZ is focused on helping clients promote events, develop talent and present their brands with confidence. Whether you are organising an event, promoting an artist or looking for a creative design, start the conversation with us.</p><a class="btn blue" href="#contact">Work with us</a></div>
+ <div class="about-panel"><h2>Our promise</h2><p>“WE MAKE IT HAPPENS”</p><ul class="checks"><li>Client-focused communication</li><li>Creative promotion and design</li><li>Support for events and talent</li><li>One point of contact for enquiries</li></ul></div>
+</section>
+<section id="contact">
+ <div class="section-head"><div class="eyebrow">Let's talk</div><h2>Contact the administrator</h2><p>Send your enquiry through WhatsApp. Your message will be prepared with the details you enter.</p></div>
+ <div class="contact-wrap">
+  <div class="contact-card"><h3>Reach AISON PROMOTIONZ</h3>
+   <div class="contact-line">📞 <small>Phone</small><a href="tel:+256771271886">+256 771 271886</a></div>
+   <div class="contact-line">💬 <small>WhatsApp</small><a href="https://wa.me/256771271886" target="_blank" rel="noopener">Message the administrator</a></div>
+   <div class="contact-line">🌐 <small>Service area</small><strong>Uganda</strong></div>
+   <p class="form-note">For a quick response, include your event date, location and the service you need.</p>
+  </div>
+  <div class="form-card"><h3>Client enquiry form</h3>
+   <form id="enquiryForm">
+    <label>Your name<input id="clientName" required placeholder="Enter your name"></label>
+    <label>Phone number<input id="clientPhone" required type="tel" placeholder="Your contact number"></label>
+    <label class="full">Service needed<select id="service" required><option value="">Choose a service</option><option>Event Marketing</option><option>Event Management</option><option>Talent Promotion</option><option>Artist Management</option><option>Graphics Designing</option><option>T-shirt Printing</option><option>Blogs and Vlogs</option><option>Other</option></select></label>
+    <label class="full">Tell us about your request<textarea id="message" required placeholder="Describe your event, design or project..."></textarea></label>
+    <button class="btn red full" type="submit">Send enquiry on WhatsApp</button>
+   </form>
+   <p class="form-note">This opens WhatsApp on your device; review and press Send there. The website does not transmit or store your message automatically.</p>
+  </div>
+ </div>
+</section>
+<section class="admin" id="admin">
+ <div class="section-head"><div class="eyebrow">Administrator area</div><h2>Admin workspace</h2><p>A simple private-on-this-device workspace for keeping enquiry notes.</p></div>
+ <div class="admin-box">
+  <div id="adminLogin"><h3>Administrator sign in</h3><p class="form-note">Authorised administrators only.</p>
+   <label>Administrator password<input id="adminCode" type="password" placeholder="Enter administrator password" autocomplete="current-password"></label><button class="btn blue" id="loginBtn" style="margin-top:12px">Sign in</button><p id="loginError" style="color:#c21f2a" role="status" aria-live="polite"></p>
+  </div>
+  <div id="adminPanel" class="hidden"><div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:center"><h3>Administrator workspace</h3><button class="btn" style="background:#e8ebf5" id="logoutBtn">Sign out</button></div>
+   <p class="form-note">Add details when a client contacts you. These notes are saved only in this browser on this device; they are not shared with other devices.</p>
+   <div class="admin-grid"><label>Client name<input id="noteName" placeholder="Client name"></label><label>Service<input id="noteService" placeholder="Service requested"></label><label class="full">Follow-up notes<textarea id="noteText" placeholder="Record agreed details or next steps"></textarea></label></div>
+   <button class="btn red" id="saveNote" style="margin-top:12px">Save note</button>
+   <div class="entry" style="margin:18px 0;background:#f8f9ff">
+    <h3>📢 Publish a poster</h3>
+    <p class="form-note">This is the poster publishing area. Add an image and its information, then publish it to the public Posters page.</p>
+    <div class="admin-grid">
+     <label>Poster title<input id="posterTitle" placeholder="Enter poster title"></label>
+     <label>Poster category<select id="posterCategory"><option>Event Marketing</option><option>Event Management</option><option>Talent Promotion</option><option>Artist Management</option><option>Graphics Designing</option><option>T-shirt Printing</option><option>Blogs and Vlogs</option><option>General Announcement</option></select></label>
+     <label class="full">Choose poster image<input id="posterFile" type="file" accept="image/*"></label>
+     <label class="full">Poster details<textarea id="posterDescription" placeholder="Enter event date, venue, contacts or other details"></textarea></label>
+    </div>
+    <button class="btn red" id="publishPoster" type="button" style="margin-top:12px">Publish poster</button>
+    <p class="form-note" id="posterStatus" role="status"></p>
+   </div>
+
+   <div class="entry" style="margin:18px 0">
+    <h3>Manage published updates</h3>
+    <p class="form-note">View posts already published and delete any post you no longer want displayed.</p>
+    <div id="adminPublishedPosts" class="admin-list" aria-live="polite"></div>
+   </div>
+
+
+   <div class="admin-list" id="notesList"></div>
+  </div>
+ </div>
+</section>
+</main>
+<footer><strong>AISON PROMOTIONZ</strong><br>WE MAKE IT HAPPENS<br><small>© <span id="year"></span> AISON PROMOTIONZ · Call <a href="tel:+256771271886">+256 771 271886</a></small></footer>
+<a class="float-wa" href="https://wa.me/256771271886?text=Hello%20AISON%20PROMOTIONZ" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">WhatsApp ↗</a>
+<script>
+"use strict";
+const ADMIN_CODE = "2468";
+document.getElementById("year").textContent = new Date().getFullYear();
+
+document.getElementById("enquiryForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+  const name = document.getElementById("clientName").value.trim();
+  const phone = document.getElementById("clientPhone").value.trim();
+  const service = document.getElementById("service").value;
+  const message = document.getElementById("message").value.trim();
+  const text = `Hello AISON PROMOTIONZ, I would like to make an enquiry.
+Name: ${name}
+Phone: ${phone}
+Service: ${service}
+Details: ${message}`;
+  window.open("https://wa.me/256771271886?text=" + encodeURIComponent(text), "_blank");
+});
+
+const loginBox = document.getElementById("adminLogin");
+const adminPanel = document.getElementById("adminPanel");
+const loginButton = document.getElementById("loginBtn");
+loginButton.addEventListener("click", function () {
+  const enteredCode = document.getElementById("adminCode").value.trim();
+  const error = document.getElementById("loginError");
+  if (enteredCode === ADMIN_CODE) {
+    loginBox.classList.add("hidden");
+    adminPanel.classList.remove("hidden");
+    error.textContent = "";
+    renderNotes();
+    renderAdminPublishedPosts();
+  } else {
+    error.textContent = "Sign-in failed. Check your password and try again.";
+  }
+});
+document.getElementById("adminCode").addEventListener("keydown", function (e) {
+  if (e.key === "Enter") loginButton.click();
+});
+document.getElementById("logoutBtn").addEventListener("click", function () {
+  adminPanel.classList.add("hidden");
+  loginBox.classList.remove("hidden");
+  document.getElementById("adminCode").value = "";
+});
+
+function getNotes() {
+  try { return JSON.parse(localStorage.getItem("aisonAdminNotes") || "[]"); }
+  catch (e) { return []; }
+}
+function renderNotes() {
+  const box = document.getElementById("notesList");
+  const notes = getNotes();
+  box.innerHTML = "";
+  if (!notes.length) {
+    const empty = document.createElement("p");
+    empty.className = "form-note";
+    empty.textContent = "No notes saved yet.";
+    box.appendChild(empty);
+    return;
+  }
+  notes.slice().reverse().forEach(function (n, i) {
+    const item = document.createElement("div");
+    item.className = "entry";
+    const heading = document.createElement("strong");
+    heading.textContent = n.name + " — " + n.service;
+    const date = document.createElement("small");
+    date.textContent = " · " + n.date;
+    const body = document.createElement("p");
+    body.textContent = n.note;
+    const del = document.createElement("button");
+    del.className = "btn";
+    del.style.background = "#f2f3f8";
+    del.textContent = "Delete";
+    del.addEventListener("click", function () {
+      const all = getNotes();
+      all.splice(all.length - 1 - i, 1);
+      localStorage.setItem("aisonAdminNotes", JSON.stringify(all));
+      renderNotes();
+    });
+    item.append(heading, date, body, del);
+    box.appendChild(item);
+  });
+}
+document.getElementById("saveNote").addEventListener("click", function () {
+  const name = document.getElementById("noteName").value.trim();
+  const service = document.getElementById("noteService").value.trim();
+  const note = document.getElementById("noteText").value.trim();
+  if (!name || !service || !note) {
+    alert("Please complete the client name, service and follow-up notes.");
+    return;
+  }
+  const all = getNotes();
+  all.push({ name: name, service: service, note: note, date: new Date().toLocaleString() });
+  localStorage.setItem("aisonAdminNotes", JSON.stringify(all));
+  document.getElementById("noteName").value = "";
+  document.getElementById("noteService").value = "";
+  document.getElementById("noteText").value = "";
+  renderNotes();
+});
+
+function readPublishedPosters() {
+  try { return JSON.parse(localStorage.getItem("aisonPublishedPosters") || "[]"); }
+  catch (e) { return []; }
+}
+
+function renderAdminPublishedPosts() {
+  const target = document.getElementById("adminPublishedPosts");
+  if (!target) return;
+  const posts = readPublishedPosters();
+  target.innerHTML = "";
+  if (!posts.length) {
+    const empty = document.createElement("p");
+    empty.className = "form-note";
+    empty.textContent = "There are no published updates to manage yet.";
+    target.appendChild(empty);
+    return;
+  }
+  posts.slice().reverse().forEach(function (post) {
+    const row = document.createElement("div");
+    row.className = "admin-published-row";
+    const img = document.createElement("img");
+    img.src = post.image;
+    img.alt = post.title + " thumbnail";
+    const info = document.createElement("div");
+    info.className = "admin-published-info";
+    const title = document.createElement("strong");
+    title.textContent = post.title;
+    const category = document.createElement("small");
+    category.textContent = post.category + " · " + post.date;
+    info.append(title, category);
+    const del = document.createElement("button");
+    del.type = "button";
+    del.className = "delete-post-btn";
+    del.textContent = "Delete";
+    del.addEventListener("click", function () {
+      if (!window.confirm('Delete "' + post.title + '"? This cannot be undone.')) return;
+      const remaining = readPublishedPosters().filter(function (item) {
+        return item.id !== post.id;
+      });
+      localStorage.setItem("aisonPublishedPosters", JSON.stringify(remaining));
+      renderPublishedPosters();
+      renderAdminPublishedPosts();
+      renderAdminPublishedPosts();
+    });
+    row.append(img, info, del);
+    target.appendChild(row);
+  });
+}
+
+function renderPublishedPosters() {
+  const target = document.getElementById("publicPosters");
+  if (!target) return;
+  const posters = readPublishedPosters();
+  target.innerHTML = "";
+  if (!posters.length) {
+    const empty = document.createElement("div");
+    empty.className = "service";
+    empty.innerHTML = "<div class='num'>★</div><h3>No posters published yet</h3><p>New AISON PROMOTIONZ posters will appear here.</p>";
+    target.appendChild(empty);
+    return;
+  }
+  posters.slice().reverse().forEach(function (p) {
+    const card = document.createElement("article");
+    card.className = "poster-card";
+    const img = document.createElement("img");
+    img.src = p.image;
+    img.alt = p.title + " poster";
+    const body = document.createElement("div");
+    body.className = "poster-card-body";
+    const tag = document.createElement("span");
+    tag.className = "poster-tag";
+    tag.textContent = p.category;
+    const title = document.createElement("h3");
+    title.textContent = p.title;
+    const desc = document.createElement("p");
+    desc.textContent = p.description || "Contact AISON PROMOTIONZ for more information.";
+    const date = document.createElement("small");
+    date.textContent = "Published: " + p.date;
+    body.append(tag, title, desc, date);
+    card.append(img, body);
+    target.appendChild(card);
+  });
+}
+function compressPoster(file) {
+  return new Promise(function (resolve, reject) {
+    if (!file || !file.type.startsWith("image/")) {
+      reject(new Error("Please choose an image file."));
+      return;
+    }
+    const reader = new FileReader();
+    reader.onerror = function () { reject(new Error("Could not read this image.")); };
+    reader.onload = function () {
+      const img = new Image();
+      img.onerror = function () { reject(new Error("Could not open this image.")); };
+      img.onload = function () {
+        const max = 1400;
+        const scale = Math.min(1, max / Math.max(img.width, img.height));
+        const canvas = document.createElement("canvas");
+        canvas.width = Math.round(img.width * scale);
+        canvas.height = Math.round(img.height * scale);
+        canvas.getContext("2d").drawImage(img, 0, 0, canvas.width, canvas.height);
+        resolve(canvas.toDataURL("image/jpeg", 0.76));
+      };
+      img.src = reader.result;
+    };
+    reader.readAsDataURL(file);
+  });
+}
+const publishButton = document.getElementById("publishPoster");
+if (publishButton) {
+  publishButton.addEventListener("click", async function () {
+    const title = document.getElementById("posterTitle").value.trim();
+    const category = document.getElementById("posterCategory").value;
+    const description = document.getElementById("posterDescription").value.trim();
+    const file = document.getElementById("posterFile").files[0];
+    const status = document.getElementById("posterStatus");
+    if (!title || !file) {
+      status.textContent = "Please enter a title and select a poster image.";
+      return;
+    }
+    publishButton.disabled = true;
+    publishButton.textContent = "Publishing...";
+    status.textContent = "";
+    try {
+      const image = await compressPoster(file);
+      const posters = readPublishedPosters();
+      posters.push({
+        id: Date.now(), title: title, category: category,
+        description: description, image: image,
+        date: new Date().toLocaleDateString()
+      });
+      localStorage.setItem("aisonPublishedPosters", JSON.stringify(posters));
+      document.getElementById("posterTitle").value = "";
+      document.getElementById("posterDescription").value = "";
+      document.getElementById("posterFile").value = "";
+      status.textContent = "Published! Scroll to the Updates page to see it.";
+      renderPublishedPosters();
+    } catch (err) {
+      status.textContent = err.message || "Could not publish. Browser storage may be full.";
+    } finally {
+      publishButton.disabled = false;
+      publishButton.textContent = "Publish poster";
+    }
+  });
+}
+renderPublishedPosters();
+</script>
+</body></html>
